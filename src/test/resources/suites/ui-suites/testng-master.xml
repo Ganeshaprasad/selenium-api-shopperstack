@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="UI-Master-Suite">
+    <test name="All-UI-Test">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="com.shopperstack.uitest.HomePageTest"></class>
+        </classes>
+    </test>
+</suite>

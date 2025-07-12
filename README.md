@@ -19,7 +19,6 @@ An automation framework combining **Selenium WebDriver** and **Rest Assured** to
 ---
 
 
----
 
 ## ⚙️ Technologies Used
 
@@ -34,30 +33,20 @@ An automation framework combining **Selenium WebDriver** and **Rest Assured** to
 - (Optional) Allure or Extent Reports
 
 ---
+## 💻 Parallel Execution Support
+Thread-safe WebDriver is used to support parallel UI execution using:
 
 ## 🚀 How to Run Tests
 
-### 1. Clone the repo
 ```bash
 git clone https://github.com/Ganeshaprasad/selenium-api-shopperstack.git
 cd selenium-api-shopperstack
-
 
 ###  Run with Maven
 mvn clean test
 
 ### Run specific TestNG suite
 mvn test -DsuiteXmlFile=testng.xml
-
+```
 ---
-
-🧵 Parallel Execution Support
-Thread-safe WebDriver is used to support parallel UI execution using:
-
-ThreadLocal<WebDriver> pattern
-
-parallel="methods" in testng.xml
-
----
-
-
+###  🚀Note: This framework automates ShoppersStack — a demo eCommerce site — for learning purposes only.
