@@ -1,5 +1,6 @@
 package com.shopperstack.ui;
 
+import com.shopperstack.utils.WaitUtility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -28,7 +29,9 @@ private WebDriver driver;
 
     public void clickOnLogin()
     {
-       logInButton.click();
+       if( !WaitUtility.waitAndClickFluently(driver,logInButton,10)) {
+           throw new RuntimeException("Element Not clickable");
+       }
     }
 
     public void setEmail(String email)

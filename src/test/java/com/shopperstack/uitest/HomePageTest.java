@@ -8,14 +8,14 @@ import org.testng.annotations.Test;
 public class HomePageTest extends BaseLoggedInTest {
     private HomePagePOM homePagePOM;
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     private void setUpPage() {
         homePagePOM = new HomePagePOM(getDriver());
     }
 
     @Test
     public void verifyThePresenceOfHeaderLogo() {
-        System.out.println("home page test ******************");
+      //  System.out.printf("[%s] setup done ******************%n", Thread.currentThread().getName());
         Assert.assertTrue(homePagePOM.isHeaderLogoPresent(), "Logo not present");
     }
 }
