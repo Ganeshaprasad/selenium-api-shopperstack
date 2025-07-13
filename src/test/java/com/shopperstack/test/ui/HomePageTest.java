@@ -1,5 +1,6 @@
-package com.shopperstack.uitest;
+package com.shopperstack.test.ui;
 
+import com.shopperstack.base.BaseLoggedInTest;
 import com.shopperstack.ui.HomePagePOM;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
