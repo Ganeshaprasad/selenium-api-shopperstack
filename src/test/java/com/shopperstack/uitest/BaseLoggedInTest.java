@@ -9,28 +9,30 @@ import org.testng.annotations.BeforeMethod;
 
 public class BaseLoggedInTest extends BaseUiTest {
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void loginToApplication() {
+    getDriver().manage().deleteAllCookies(); // ✅ Ensures no old login/session is reused
         LoginPagePOM loginPagePOM = new LoginPagePOM(getDriver());
         loginPagePOM.clickOnLogin();
         loginPagePOM.setEmail("ganesha.prasad1996@gmail.com");
-        loginPagePOM.setPassword("Ganesh@81");
+        loginPagePOM.setPassword("Test@123");
         loginPagePOM.clickOnSignIn();
 
         HomePagePOM homePagePOM = new HomePagePOM(getDriver());
-        System.out.println("login done ********************");
-     
+      //  System.out.printf("[%s] setup done ******************%n", Thread.currentThread().getName());
+
         Assert.assertTrue(homePagePOM.isHomeLinkPresent(), "Login failed — Home link not found after login");
 
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void logOut(ITestResult result) {
         if (result.getStatus() == ITestResult.SUCCESS) {
             HomePagePOM homePagePOM = new HomePagePOM(getDriver());
             homePagePOM.clickOnUserIcon();
             homePagePOM.clickOnLogout();
         }
-        System.out.println("logot done***********");
+       // System.out.printf("[%s] setup done ******************%n", Thread.currentThread().getName());
     }
+
 }

@@ -1,5 +1,6 @@
 package com.shopperstack.ui;
 
+import com.shopperstack.utils.WaitUtility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -23,29 +24,24 @@ public class HomePagePOM {
     @FindBy(xpath = "//a[@id='home']/img")
     private WebElement headerLogo;
 
-    public HomePagePOM(WebDriver driver)
-    {
-        PageFactory.initElements(driver,this);
-        this.driver=driver;
+    public HomePagePOM(WebDriver driver) {
+        PageFactory.initElements(driver, this);
+        this.driver = driver;
     }
 
-    public boolean isHomeLinkPresent()
-    {
-      return  homePageName.isDisplayed();
+    public boolean isHomeLinkPresent() {
+        return WaitUtility.waitForElementToBePresentAndClickable(driver,10,homePageName);
     }
 
-    public void clickOnUserIcon()
-    {
+    public void clickOnUserIcon() {
         userIcon.click();
     }
 
-    public void clickOnLogout()
-    {
+    public void clickOnLogout() {
         logOut.click();
     }
 
-    public boolean isHeaderLogoPresent()
-    {
-       return headerLogo.isDisplayed();
+    public boolean isHeaderLogoPresent() {
+        return WaitUtility.waitForElementToBePresentAndClickable(driver, 10, headerLogo);
     }
 }

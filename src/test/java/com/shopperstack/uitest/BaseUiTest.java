@@ -1,44 +1,64 @@
 package com.shopperstack.uitest;
 
+import com.shopperstack.ui.HomePagePOM;
+import com.shopperstack.ui.LoginPagePOM;
 import com.shopperstack.utils.WaitUtility;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
+import org.testng.Assert;
+import org.testng.ITestContext;
+import org.testng.ITestResult;
+import org.testng.annotations.*;
+
+import java.lang.reflect.Method;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 public class BaseUiTest {
 
     // Created ThreadLocal instance to maintain a separate WebDriver per thread (for parallel execution)
-    private static ThreadLocal<WebDriver> threadLocal = new ThreadLocal<>();
+    private static final ThreadLocal<WebDriver> THREAD_LOCAL = new ThreadLocal<>();
 
+
+
+
+    // Thread-safe way to get the WebDriver for the current thread
     protected static WebDriver getDriver() {
-        return threadLocal.get();
+        return THREAD_LOCAL.get();
     }
 
-    static WebDriver driver=getDriver();
+
     @Parameters("browser")
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void setup(String browser) {
-        if (browser.equalsIgnoreCase("chrome")) {
-            threadLocal.set(new ChromeDriver());
-        } else if (browser.equalsIgnoreCase("firefox")) {
-            threadLocal.set(new FirefoxDriver());
-        }
 
-        getDriver().manage().window().maximize();
-        getDriver().get("https://www.shoppersstack.com/");
-        WaitUtility.waitForPageLoad(getDriver());
 
-        System.out.println("set up done******************");
+            if (browser.equalsIgnoreCase("chrome")) {
+                THREAD_LOCAL.set(new ChromeDriver());
+            } else if (browser.equalsIgnoreCase("firefox")) {
+                THREAD_LOCAL.set(new FirefoxDriver());
+            }
+
+            getDriver().manage().window().maximize();
+            getDriver().get("https://www.shoppersstack.com/");
+
+            //TODO Need to remove this method, its not needed
+            // WaitUtility.waitForPageLoad(getDriver());
+
+
+
     }
 
-    @AfterMethod
-    public void teardown()
-    {
+    @AfterMethod(alwaysRun = true)
+    public void teardown(ITestContext context) {
         getDriver().quit();
-        threadLocal.remove();
-        System.out.println("tear down done*************");
+        THREAD_LOCAL.remove();
+
+
     }
+
+
 }
