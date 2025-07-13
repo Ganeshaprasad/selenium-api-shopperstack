@@ -1,0 +1,21 @@
+2025-07-13 14:56:52 [main] INFO  com.shopperstack.support.ListenerImplementation - **Suite started: Parallel Test**
+2025-07-13 14:56:53 [TestNG-test-Parallel Test-1] INFO  com.shopperstack.test.ui.HomePageTest - **Chrome browser Launched**
+2025-07-13 14:56:53 [TestNG-test-Parallel Test-2] INFO  com.shopperstack.test.ui.MenPage - **Chrome browser Launched**
+2025-07-13 14:56:53 [TestNG-test-Parallel Test-1] INFO  com.shopperstack.test.ui.HomePageTest - **Window maximised**
+2025-07-13 14:56:53 [TestNG-test-Parallel Test-2] INFO  com.shopperstack.test.ui.MenPage - **Window maximised**
+2025-07-13 14:56:56 [TestNG-test-Parallel Test-2] INFO  com.shopperstack.test.ui.MenPage - **Enter the URL**
+2025-07-13 14:56:56 [TestNG-test-Parallel Test-2] INFO  com.shopperstack.test.ui.MenPage - **Starting login process...**
+2025-07-13 14:56:56 [TestNG-test-Parallel Test-1] INFO  com.shopperstack.test.ui.HomePageTest - **Enter the URL**
+2025-07-13 14:56:56 [TestNG-test-Parallel Test-1] INFO  com.shopperstack.test.ui.HomePageTest - **Starting login process...**
+2025-07-13 14:57:06 [TestNG-test-Parallel Test-2] ERROR com.shopperstack.test.ui.MenPage - **Login Interrupted or failed **
+2025-07-13 14:57:06 [TestNG-test-Parallel Test-2] INFO  com.shopperstack.support.ListenerImplementation - **Test started: dummyTest**
+2025-07-13 14:57:06 [TestNG-test-Parallel Test-2] WARN  com.shopperstack.support.ListenerImplementation - **Test skipped: dummyTest**
+2025-07-13 14:57:06 [TestNG-test-Parallel Test-2] INFO  com.shopperstack.test.ui.MenPage - **Starting logout process...**
+2025-07-13 14:57:06 [TestNG-test-Parallel Test-2] INFO  com.shopperstack.test.ui.MenPage - **Browser closed**
+2025-07-13 14:57:07 [TestNG-test-Parallel Test-1] INFO  com.shopperstack.test.ui.HomePageTest - **Login successful**
+2025-07-13 14:57:07 [TestNG-test-Parallel Test-1] INFO  com.shopperstack.support.ListenerImplementation - **Test started: verifyThePresenceOfHeaderLogo**
+2025-07-13 14:57:07 [TestNG-test-Parallel Test-1] INFO  com.shopperstack.support.ListenerImplementation - **Test passed: verifyThePresenceOfHeaderLogo**
+2025-07-13 14:57:07 [TestNG-test-Parallel Test-1] INFO  com.shopperstack.test.ui.HomePageTest - **Starting logout process...**
+2025-07-13 14:57:07 [TestNG-test-Parallel Test-1] INFO  com.shopperstack.test.ui.HomePageTest - **Logout successful**
+2025-07-13 14:57:07 [TestNG-test-Parallel Test-1] INFO  com.shopperstack.test.ui.HomePageTest - **Browser closed**
+2025-07-13 14:57:07 [main] INFO  com.shopperstack.support.ListenerImplementation - **Suite finished: Parallel Test**
