@@ -6,7 +6,7 @@
     <test name="All-UI-Test">
         <parameter name="browser" value="chrome"></parameter>
         <classes>
-            <class name="com.shopperstack.test.ui.HomePageTest"></class>
+            <class name="com.shopperstack.test.ui.MenPage"></class>
         </classes>
     </test>
 </suite>
