@@ -2,6 +2,7 @@
 <suite name="UI-CrossBrowser-Suite" parallel="classes" thread-count="2">
     <listeners>
         <listener class-name="com.shopperstack.support.ListenerImplementation"/>
+
     </listeners>
 
     <!-- Chrome Tests -->

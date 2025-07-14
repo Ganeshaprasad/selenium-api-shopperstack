@@ -28,7 +28,7 @@ public class BaseUiTest {
     protected final Logger logger = LogManager.getLogger(getClass());
 
     // Thread-safe way to get the WebDriver for the current thread
-    protected static WebDriver getDriver() {
+    public static WebDriver getDriver() {
         return THREAD_LOCAL.get();
     }
 

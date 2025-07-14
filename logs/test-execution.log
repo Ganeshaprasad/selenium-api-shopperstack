@@ -19,3 +19,62 @@
 2025-07-13 14:57:07 [TestNG-test-Parallel Test-1] INFO  com.shopperstack.test.ui.HomePageTest - **Logout successful**
 2025-07-13 14:57:07 [TestNG-test-Parallel Test-1] INFO  com.shopperstack.test.ui.HomePageTest - **Browser closed**
 2025-07-13 14:57:07 [main] INFO  com.shopperstack.support.ListenerImplementation - **Suite finished: Parallel Test**
+2025-07-14 12:35:14 [main] INFO  com.shopperstack.support.ListenerImplementation - **Suite started: All-UI-Test**
+2025-07-14 12:35:18 [main] INFO  com.shopperstack.test.ui.HomePageTest - **Chrome browser Launched**
+2025-07-14 12:35:18 [main] INFO  com.shopperstack.test.ui.HomePageTest - **Window maximised**
+2025-07-14 12:35:20 [main] INFO  com.shopperstack.test.ui.HomePageTest - **Enter the URL**
+2025-07-14 12:35:20 [main] INFO  com.shopperstack.test.ui.HomePageTest - **Starting login process...**
+2025-07-14 12:35:29 [main] INFO  com.shopperstack.test.ui.HomePageTest - **Login successful**
+2025-07-14 12:35:29 [main] INFO  com.shopperstack.support.ListenerImplementation - **Test started: verifyThePresenceOfHeaderLogo**
+2025-07-14 12:35:29 [main] INFO  com.shopperstack.support.ListenerImplementation - **Test passed: verifyThePresenceOfHeaderLogo**
+2025-07-14 12:35:29 [main] INFO  com.shopperstack.test.ui.HomePageTest - **Starting logout process...**
+2025-07-14 12:35:29 [main] INFO  com.shopperstack.test.ui.HomePageTest - **Logout successful**
+2025-07-14 12:35:30 [main] INFO  com.shopperstack.test.ui.HomePageTest - **Browser closed**
+2025-07-14 12:35:30 [main] INFO  com.shopperstack.support.ListenerImplementation - **Suite finished: All-UI-Test**
+2025-07-14 12:36:14 [main] INFO  com.shopperstack.support.ListenerImplementation - **Suite started: All-UI-Test**
+2025-07-14 12:36:15 [main] INFO  com.shopperstack.test.ui.HomePageTest - **Chrome browser Launched**
+2025-07-14 12:36:15 [main] INFO  com.shopperstack.test.ui.HomePageTest - **Window maximised**
+2025-07-14 12:36:18 [main] INFO  com.shopperstack.test.ui.HomePageTest - **Enter the URL**
+2025-07-14 12:36:18 [main] INFO  com.shopperstack.test.ui.HomePageTest - **Starting login process...**
+2025-07-14 12:36:29 [main] INFO  com.shopperstack.test.ui.HomePageTest - **Login successful**
+2025-07-14 12:36:29 [main] INFO  com.shopperstack.support.ListenerImplementation - **Test started: verifyThePresenceOfHeaderLogo**
+2025-07-14 12:36:29 [main] INFO  com.shopperstack.support.ListenerImplementation - **Test passed: verifyThePresenceOfHeaderLogo**
+2025-07-14 12:36:29 [main] INFO  com.shopperstack.test.ui.HomePageTest - **Starting logout process...**
+2025-07-14 12:36:29 [main] INFO  com.shopperstack.test.ui.HomePageTest - **Logout successful**
+2025-07-14 12:36:30 [main] INFO  com.shopperstack.test.ui.HomePageTest - **Browser closed**
+2025-07-14 12:36:30 [main] INFO  com.shopperstack.support.ListenerImplementation - **Suite finished: All-UI-Test**
+2025-07-14 12:36:56 [main] INFO  com.shopperstack.support.ListenerImplementation - **Suite started: All-UI-Test**
+2025-07-14 12:36:57 [main] INFO  com.shopperstack.test.ui.MenPage - **Chrome browser Launched**
+2025-07-14 12:36:57 [main] INFO  com.shopperstack.test.ui.MenPage - **Window maximised**
+2025-07-14 12:37:00 [main] INFO  com.shopperstack.test.ui.MenPage - **Enter the URL**
+2025-07-14 12:37:00 [main] INFO  com.shopperstack.test.ui.MenPage - **Starting login process...**
+2025-07-14 12:37:11 [main] ERROR com.shopperstack.test.ui.MenPage - **Login Interrupted or failed **
+2025-07-14 12:37:11 [main] INFO  com.shopperstack.support.ListenerImplementation - **Test started: dummyTest**
+2025-07-14 12:37:11 [main] WARN  com.shopperstack.support.ListenerImplementation - **Test skipped: dummyTest**
+2025-07-14 12:37:11 [main] INFO  com.shopperstack.test.ui.MenPage - **Starting logout process...**
+2025-07-14 12:37:11 [main] INFO  com.shopperstack.test.ui.MenPage - **Browser closed**
+2025-07-14 12:37:11 [main] INFO  com.shopperstack.support.ListenerImplementation - **Suite finished: All-UI-Test**
+2025-07-14 12:38:16 [main] INFO  com.shopperstack.support.ListenerImplementation - **Suite started: All-UI-Test**
+2025-07-14 12:38:17 [main] INFO  com.shopperstack.test.ui.MenPage - **Chrome browser Launched**
+2025-07-14 12:38:17 [main] INFO  com.shopperstack.test.ui.MenPage - **Window maximised**
+2025-07-14 12:38:21 [main] INFO  com.shopperstack.test.ui.MenPage - **Enter the URL**
+2025-07-14 12:38:21 [main] INFO  com.shopperstack.test.ui.MenPage - **Starting login process...**
+2025-07-14 12:38:36 [main] INFO  com.shopperstack.test.ui.MenPage - **Login successful**
+2025-07-14 12:38:36 [main] INFO  com.shopperstack.support.ListenerImplementation - **Test started: dummyTest**
+2025-07-14 12:38:36 [main] ERROR com.shopperstack.support.ListenerImplementation - **Test failed: dummyTest**
+2025-07-14 12:38:36 [main] ERROR com.shopperstack.support.ListenerImplementation - **Exception: 
+2025-07-14 12:38:36 [main] INFO  com.shopperstack.test.ui.MenPage - **Starting logout process...**
+2025-07-14 12:38:37 [main] INFO  com.shopperstack.test.ui.MenPage - **Browser closed**
+2025-07-14 12:38:37 [main] INFO  com.shopperstack.support.ListenerImplementation - **Suite finished: All-UI-Test**
+2025-07-14 12:41:14 [main] INFO  com.shopperstack.support.ListenerImplementation - **Suite started: All-UI-Test**
+2025-07-14 12:41:16 [main] INFO  com.shopperstack.test.ui.MenPage - **Chrome browser Launched**
+2025-07-14 12:41:16 [main] INFO  com.shopperstack.test.ui.MenPage - **Window maximised**
+2025-07-14 12:41:19 [main] INFO  com.shopperstack.test.ui.MenPage - **Enter the URL**
+2025-07-14 12:41:19 [main] INFO  com.shopperstack.test.ui.MenPage - **Starting login process...**
+2025-07-14 12:41:33 [main] INFO  com.shopperstack.test.ui.MenPage - **Login successful**
+2025-07-14 12:41:33 [main] INFO  com.shopperstack.support.ListenerImplementation - **Test started: dummyTest**
+2025-07-14 12:41:33 [main] ERROR com.shopperstack.support.ListenerImplementation - **Test failed: dummyTest**
+2025-07-14 12:41:33 [main] ERROR com.shopperstack.support.ListenerImplementation - **Exception: 
+2025-07-14 12:41:33 [main] INFO  com.shopperstack.test.ui.MenPage - **Starting logout process...**
+2025-07-14 12:41:34 [main] INFO  com.shopperstack.test.ui.MenPage - **Browser closed**
+2025-07-14 12:41:34 [main] INFO  com.shopperstack.support.ListenerImplementation - **Suite finished: All-UI-Test**
