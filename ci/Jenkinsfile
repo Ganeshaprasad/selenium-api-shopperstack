@@ -26,20 +26,21 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            // Archive the report folder (optional)
-            archiveArtifacts artifacts: 'reports/**', fingerprint: true
+ post {
+    always {
+        // ✅ 1. Archive the whole report folder for download (optional but good)
+        archiveArtifacts artifacts: 'reports/**', fingerprint: true
 
-            // Publish the Extent Report
+        // ✅ 2. Publish the full HTML report with required styles
         publishHTML([
-    allowMissing: false,               // ✅ REQUIRED to avoid the error
-    alwaysLinkToLastBuild: true,
-    keepAll: true,
-    reportDir: 'reports',
-    reportFiles: 'ExtentReport.html',
-    reportName: 'Extent Report'
-])
-        }
+            allowMissing: false,                 // 🔒 Fail if file is missing
+            alwaysLinkToLastBuild: true,         // 🔁 Always show latest report
+            keepAll: true,                       // 🗂 Keep old reports too
+            reportDir: 'reports',                // 📁 Folder where report is generated
+            reportFiles: 'ExtentReport.html',    // 📄 Main HTML file to open
+            reportName: 'Extent Report'          // 📌 Display name in Jenkins
+        ])
     }
+}
+
 }
