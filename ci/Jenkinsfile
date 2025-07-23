@@ -1,0 +1,44 @@
+pipeline {
+    agent any
+
+    tools {
+        maven 'Maven 3.9.0'   // Must match the Maven name configured in Jenkins > Global Tool Configuration
+        jdk 'JDK 11'          // Must match the JDK name in Jenkins configuration
+    }
+
+    triggers {
+        cron('0 3 * * *')  // Runs every day at 9:00 AM IST (3:30 AM UTC)
+    }
+
+    stages {
+        stage('Test Suite 1') {
+            steps {
+                echo 'Running testng-master.xml'
+                sh 'mvn clean test -DsuiteXmlFile=src/test/resources/suites/ui-suites/testng-master.xml'
+            }
+        }
+
+        stage('Test Suite 2') {
+            steps {
+                echo 'Running testng-parallel.xml'
+                sh 'mvn clean test -DsuiteXmlFile=src/test/resources/suites/ui-suites/testng-parallel.xml'
+            }
+        }
+    }
+
+    post {
+        always {
+            // Archive the report folder (optional)
+            archiveArtifacts artifacts: 'reports/**', fingerprint: true
+
+            // Publish the Extent Report
+            publishHTML([
+                reportDir: 'reports',                  // folder name
+                reportFiles: 'ExtentReport.html',     // HTML file name
+                reportName: 'Extent Report',          // Display name in Jenkins UI
+                alwaysLinkToLastBuild: true,
+                keepAll: true
+            ])
+        }
+    }
+}
